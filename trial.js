@@ -1,8 +1,8 @@
-/* EXERCISE 10
- Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
+/* EXTRA 1
+ Write a function called "checkArray" which receives an array of random numbers (created with giveMeRandom) and prints, for each item, whether it's bigger than 5 or not.
+ The function should return the sum of just the numbers bigger than 5.
 */
-// INPUT = number N
-// OUTPUT = give an array (list) of random number between 0 and 10
+
 
 function giveMeRandom(number){
     let arrayOfNums= [];
@@ -14,6 +14,14 @@ function giveMeRandom(number){
 }
  console.log(giveMeRandom(9));
 
-//console.log(Math.random()) // returns a random number between 0 (included) and 1 (excluded):
+ function checkArray(number1) {
+    return number1.reduce(function (sum, num) {
+      if (num > 5) {
+        console.log(num  + " is greater than 5");
+        return sum + num;
+      }
+      return sum;
+    }, 0)
+}
 
-// Example of possible result: 0.956415945820096
+console.log(checkArray(giveMeRandom(3)));
