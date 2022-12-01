@@ -65,7 +65,7 @@ function crazyDiff(givenNum){
     //check if givenNum is less than 19
     if (givenNum <= 19) {
         diffNum = 19 - givenNum;
-        console.log(`The difference bettern 19 &  ${givenNum} is: ${diffNum} `);
+        console.log(`The difference between 19 &  ${givenNum} is: ${diffNum} `);
         return diffNum;
     } else {
         //if givenNum is greater or equal to 19 * 3
@@ -74,18 +74,30 @@ function crazyDiff(givenNum){
         return diffNum3;
     }
 }
-
 crazyDiff(34);
 
-
-
-/* WRITE YOUR ANSWER HERE */
 
 /* EXERCISE 4
  Write a function called "boundary" which accept an integer parameter n and returns true if n is within 20 and 100 (included) or if n it's equal to 400.
 */
+headerTitle("Exercise 4", "~~");
+function boundary(n){
+    if (n >= 20 && n <= 100) {
+        console.log(`${n} is within 20 or 100`);
+        return true;
+    } else{
+        if(n == 400){
+            console.log(`${n} is equal to 400`);
+            return true;
+        }
+        else{
+            console.log(`${n} is neither one`);
+            return false;
+        }
+    }
+};
 
-/* WRITE YOUR ANSWER HERE */
+boundary(2);
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
