@@ -42,21 +42,18 @@ console.log("Area of rectangle: ", area1);
 
 headerTitle("Exercise 2", "~~");
 function crazySum(num1, num2){
-    let totalSum = num1 + num2;
-    return totalSum;
+    if (num1 === num2) {
+        let totalSum3 = (num1 + num2) * 3;
+        console.log("Values are the same and so they are multiplied by 3: ", totalSum3);
+        return totalSum3;
+    } else {
+        let totalNum1 = num1 + num2;
+        console.log("Total sum of the two values are: ", totalNum1);
+       return totalNum1;
+    }
 }
 
-//This is for when the two integers are not the same values
-let sumTotal;
-sumTotal = crazySum(2,2);
-console.log("Total sum is: ", sumTotal);
-
-// For when the two integers are the same
-
-let multiSumByThree;
-multiSumByThree = sumTotal * 3;
-console.log("The total sum multiplied by 3: ", multiSumByThree);
-
+crazySum(44, 21);
 
 /* EXERCISE 3
  Write a function called "crazyDiff" that computes the absolute difference between a given number and 19.
@@ -64,17 +61,23 @@ console.log("The total sum multiplied by 3: ", multiSumByThree);
 */
 headerTitle("Exercise 3", "~~");
 function crazyDiff(givenNum){
+    let diffNum;
     //check if givenNum is less than 19
     if (givenNum <= 19) {
-        return 19 - givenNum;
+        diffNum = 19 - givenNum;
+        console.log(`The difference bettern 19 &  ${givenNum} is: ${diffNum} `);
+        return diffNum;
     } else {
         //if givenNum is greater or equal to 19 * 3
-        let givenNumBy3 = (givenNum - 19) * 3;
-        return givenNumBy3;
+        let diffNum3 = (givenNum - 19) * 3;
+        console.log(`The difference between ${givenNum} and 19 is: ${diffNum3}`);
+        return diffNum3;
     }
 }
 
-console.log("difference is: ", crazyDiff(44));
+crazyDiff(34);
+
+
 
 /* WRITE YOUR ANSWER HERE */
 
