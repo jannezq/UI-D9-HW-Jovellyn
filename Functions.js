@@ -26,7 +26,7 @@ headerTitle("Exercise 1", "~~");
 // output = 1 number , area 
 
 function containerArea(l1,l2){
-    return (l1 + l2) * 2;
+    return l1 * l2;
 }
 
 let area1 = containerArea(45,20);
