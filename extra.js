@@ -8,7 +8,7 @@
 function giveMeRandom(number){
     let arrayOfNums= [];
     for (let i = 0; i < number; i++) {
-        arrayOfNums.push(Math.floor(Math.random() * 10));
+        arrayOfNums.push(Math.floor(Math.random() * 11));
         
     }
    return arrayOfNums;

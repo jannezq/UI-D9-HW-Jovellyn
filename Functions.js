@@ -90,7 +90,7 @@ function boundary(n){
         }
     };
 
-boundary(2);
+boundary(34);
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
@@ -99,7 +99,7 @@ boundary(2);
 
 headerTitle("Exercise 5", "~~");
 function strivify(stringText){
-    if (stringText === "Strive") {
+    if (stringText.startsWith("Strive")) {
         console.log(`The given text ${stringText} is already the word.`);
     } else {
         let finalText = "Strive" + stringText;
@@ -107,7 +107,7 @@ function strivify(stringText){
     }
 }
 
-strivify("Certain");
+strivify("Strive");
 
 
 /* EXERCISE 6
@@ -116,12 +116,10 @@ strivify("Certain");
 */
 headerTitle("Exercise 6", "~~");
 function check3and7(positiveNum){
-    if (positiveNum % 3 == 0 || positiveNum % 7 == 0) {
+    if ( positiveNum % 3 == 0 || positiveNum % 7 == 0) {
         console.log(`${positiveNum} are multiples of 3 or 7`);
-        return true;
     } else {
         console.log(`${positiveNum} are not numbers multiple of 3 or 7`);
-        return false;
     }
 };
 
@@ -138,7 +136,7 @@ function reverseString(stringNorm){
        stringRev += stringNorm[i];
     }
     console.log("Reversed String: ", stringRev)
-    return stringRev;
+ 
 }
 
 reverseString("Hello world!");
@@ -163,6 +161,8 @@ console.log(upperFirst("hi my name is jovellyn"));
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
+
+//use the slice method for the easier options 
 headerTitle("Exercise 9", "~~");
 function cutString(enterStr){
     let removedStr="";
@@ -181,7 +181,7 @@ headerTitle("Exercise 10", "~~");
 function giveMeRandom(number){
     let arrayOfNums= [];
     for (let i = 0; i < number; i++) {
-        arrayOfNums.push(Math.floor(Math.random() * 10));
+        arrayOfNums.push(Math.floor(Math.random() * 11));
         
     }
    return arrayOfNums;
