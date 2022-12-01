@@ -1,18 +1,19 @@
-
-/* EXERCISE 7
- Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
+/* EXERCISE 10
+ Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
-// INPUT = string
-// OUTPUT = reverse string
+// INPUT = number N
+// OUTPUT = give an array (list) of random number between 0 and 10
 
-
-function reverseString(stringNorm){ 
-    let stringRev = "";
-    for (let i = stringNorm.length - 1; i >=0 ; i--) {
-       stringRev += stringNorm[i];
+function giveMeRandom(number){
+    let arrayOfNums= [];
+    for (let i = 0; i < number; i++) {
+        arrayOfNums.push(Math.floor(Math.random() * 10));
+        
     }
-    console.log("reversed string: ", stringRev)
-    return stringRev;
+   return arrayOfNums;
 }
+ console.log(giveMeRandom(9));
 
-reverseString("Hello world!");
+//console.log(Math.random()) // returns a random number between 0 (included) and 1 (excluded):
+
+// Example of possible result: 0.956415945820096
