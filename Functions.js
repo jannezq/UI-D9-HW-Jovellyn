@@ -66,12 +66,10 @@ function crazyDiff(givenNum){
     if (givenNum <= 19) {
         diffNum = 19 - givenNum;
         console.log(`The difference between 19 &  ${givenNum} is: ${diffNum} `);
-        return diffNum;
     } else {
         //if givenNum is greater or equal to 19 * 3
         let diffNum3 = (givenNum - 19) * 3;
         console.log(`The difference between ${givenNum} and 19 is: ${diffNum3}`);
-        return diffNum3;
     }
 }
 crazyDiff(34);
@@ -84,14 +82,11 @@ headerTitle("Exercise 4", "~~");
 function boundary(n){
     if (n >= 20 && n <= 100) {
         console.log(`${n} is within 20 or 100`);
-        return true;
     } else if(n == 400){
             console.log(`${n} is equal to 400`);
-            return true;
         }
         else{
             console.log(`${n} is neither one`);
-            return false;
         }
     };
 
