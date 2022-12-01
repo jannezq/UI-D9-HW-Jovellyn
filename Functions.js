@@ -85,8 +85,7 @@ function boundary(n){
     if (n >= 20 && n <= 100) {
         console.log(`${n} is within 20 or 100`);
         return true;
-    } else{
-        if(n == 400){
+    } else if(n == 400){
             console.log(`${n} is equal to 400`);
             return true;
         }
@@ -94,8 +93,7 @@ function boundary(n){
             console.log(`${n} is neither one`);
             return false;
         }
-    }
-};
+    };
 
 boundary(2);
 
@@ -104,20 +102,52 @@ boundary(2);
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-/* WRITE YOUR ANSWER HERE */
+headerTitle("Exercise 5", "~~");
+function strivify(stringText){
+    if (stringText === "Strive") {
+        console.log(`The given text ${stringText} is already the word.`);
+    } else {
+        let finalText = "Strive" + stringText;
+        console.log(`The given text will have Strive added to it: ${finalText}`);
+    }
+}
+
+strivify("Certain");
+
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
  HINT: Modulus Operator
 */
+headerTitle("Exercise 6", "~~");
+function check3and7(positiveNum){
+    if (positiveNum % 3 == 0 || positiveNum % 7 == 0) {
+        console.log(`${positiveNum} are multiples of 3 or 7`);
+        return true;
+    } else {
+        console.log(`${positiveNum} are not numbers multiple of 3 or 7`);
+        return false;
+    }
+};
 
-/* WRITE YOUR ANSWER HERE */
+check3and7(66);
 
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR ANSWER HERE */
+headerTitle("Exercise 7", "~~");
+function reverseString(stringNorm){ 
+    let stringRev = "";
+    for (let i = stringNorm.length - 1; i >=0 ; i--) {
+       stringRev += stringNorm[i];
+    }
+    console.log("Reversed String: ", stringRev)
+    return stringRev;
+}
+
+reverseString("Hello world!");
+
 
 /* EXERCISE 8
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
